@@ -18,4 +18,5 @@ router.get('/edit/:id', gameController.updatedata);
 router.post('/edit/:id', gameController.updatedataonpostnew);
 router.get('/contact', gameController.contact);
 router.get('/about', gameController.about);
+
 module.exports = router;

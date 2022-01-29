@@ -192,6 +192,8 @@ exports.deletedata= async(req,res)=>{
     
 }
 
+
+
 exports.updatedata= async(req,res) =>{
     Information.findByIdAndUpdate({_id: req.params.id},req.body, (err,docs)=>{
         if(err){
