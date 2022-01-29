@@ -1,0 +1,12 @@
+:root{
+    --bs-font-sans-serif: 'css2', sans-serif;
+}
+
+.container-xxl{ max-width: 1200px;}
+
+body{
+    background-image: url("/img/background.jpg");
+    
+}
+
+a{ color: var(--bs-dark);}

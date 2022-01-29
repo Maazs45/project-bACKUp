@@ -1,0 +1,57 @@
+<% if(game !=null) {%>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><%- game.name %></li>
+      </ol>
+    </nav>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <img src="/uploads/<%- game.image %>" class="img-fluid sticky-top" style="top: 20px;" alt="<%- game.name %>" loading="lazy">
+      </div>
+      <div class="col-12 col-md-8">
+        <div class="row">
+          <div class="col-12"><h1><%- game.name %></h1></div>
+          <div class="col-12 mb-4"><i class="bi bi-tag"></i> <%- game.category %></div>
+          <div class="col-12" style="white-space: pre-line;">
+            <h4>Game Description</h4>
+            <%- game.description %>
+        </div>
+        <div class="col-12" style="white-space: pre-line;">
+            <h4>Game Release Year</h4>
+            <%- game.releaseyear %>
+        </div>
+          
+        </div>
+
+
+
+        </div>
+            <div class="row pt-4">
+                <div class="col-12">
+                    <h4>Review</h4>
+                    <%- game.review %> 
+                </div>
+            </div>
+
+
+            
+
+      </div>
+
+      <div clas="row pt-5">
+        <form action="/edit/<%- game._id %> ">
+        <button type="submit" class="btn btn-success" >Edit</button>
+      </form>
+    </div>
+    <div clas="row pt-5">
+      <form action="/delete/<%= game._id %>">
+        
+        <button>Delete</button>
+      </form>
+      </div>
+    
+     
+<% } %> 
+
+ 

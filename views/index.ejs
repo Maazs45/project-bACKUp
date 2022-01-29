@@ -1,0 +1,327 @@
+<div class="row flex-lg-row-reverse align-items-center g-5 py-4 mb-4">
+ <div class="col-12 col-lg-6">
+    <img src="/img/hero.jpg" width="400" height="400" class="d-block mx-lg-auto img-fluid" loading="lazy" alt="gaming node.js">
+
+ </div>
+    <div class="col-12 col-lg-6">
+
+        <h1 class="display-5 fw-bold mb-3">
+            All info about gaming</h1>
+            <p class="lead">
+                All latest information about new games and surrounding afflictions
+            </p>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="/explore-latest" class="btn btn-primary btn-dark btn-lg px-4 me-md-2">Explore Latest</a>
+                <a href="/random-article" class="btn btn-outline-secondary  btn-lg px-4 me-md-2">Show Random</a>
+            </div>
+
+    </div>
+
+
+
+</div>
+
+
+<!--latest-->
+
+<section class="pb-4 pt-4">
+
+<div class="d-flex mb-2 align-items-center">
+<h2>Latest games</h2>
+ <a href="/explore-latest" class="ms-auto">View More</a>
+</div>
+
+<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+
+  <% if(games != '') { %>
+    <% games.latest.forEach(function(games, index){ %>
+    <a href="/games/<%= games._id %>" class="col text-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img src="/uploads/<%= games.image %>" alt="<%= games.name %>" loading="lazy">
+      </div>
+      <div class="pt-1"><%= games.name %></div>
+    </a>
+    <% }) %>
+  <% } else { %>
+    <p>No items found.</p>
+  <% } %>
+
+
+</div>
+
+
+
+
+
+
+
+
+</section>
+
+<!--latest-->
+
+
+<!--shooter-->
+
+<section class="pb-4 pt-4">
+
+  <div class="d-flex mb-2 align-items-center">
+  <h2>Shooter games</h2>
+   <a href="/categories/Shooter" class="ms-auto">View More</a>
+  </div>
+  
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+  
+    <% if(typeof games.shooter != 'undefined' && games.shooter.length > 0) { %>
+      <% games.shooter.forEach(function(games, index){ %>
+      <a href="/games/<%= games._id %>" class="col text-center category__link">
+        <div class="category__img category__img--large shadow">
+          <img src="/uploads/<%= games.image %>" alt="<%= games.name %>" loading="lazy">
+        </div>
+        <div class="pt-1"><%= games.name %></div>
+      </a>
+      <% }) %>
+    <% } else { %>
+      <p>No items found.</p>
+    <% } %>
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  </section>
+  
+  <!--shooter-->
+
+  <!--racing-->
+
+<section class="pb-4 pt-4">
+
+  <div class="d-flex mb-2 align-items-center">
+  <h2>Racing games</h2>
+   <a href="/categories/Racing" class="ms-auto">View More</a>
+  </div>
+  
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+  
+    <% if(typeof games.racing != 'undefined' && games.racing.length > 0) { %>
+      <% games.racing.forEach(function(games, index){ %>
+      <a href="/games/<%= games._id %>" class="col text-center category__link">
+        <div class="category__img category__img--large shadow">
+          <img src="/uploads/<%= games.image %>" alt="<%= games.name %>" loading="lazy">
+        </div>
+        <div class="pt-1"><%= games.name %></div>
+      </a>
+      <% }) %>
+    <% } else { %>
+      <p>No items found.</p>
+    <% } %>
+  
+  
+  </div>
+  
+  
+  
+  <!--Racing-->
+  
+  <!--Simulation-->
+  
+  
+  </section>
+
+  <section class="pb-4 pt-4">
+
+    <div class="d-flex mb-2 align-items-center">
+    <h2>Simulation games</h2>
+     <a href="/categories/Simulation" class="ms-auto">View More</a>
+    </div>
+    
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    
+      <% if(typeof games.simulation != 'undefined' && games.simulation.length > 0) { %>
+        <% games.simulation.forEach(function(games, index){ %>
+        <a href="/games/<%= games._id %>" class="col text-center category__link">
+          <div class="category__img category__img--large shadow">
+            <img src="/uploads/<%= games.image %>" alt="<%= games.name %>" loading="lazy">
+          </div>
+          <div class="pt-1"><%= games.name %></div>
+        </a>
+        <% }) %>
+      <% } else { %>
+        <p>No items found.</p>
+      <% } %>
+    
+    
+    </div>
+
+  </section>
+    
+    
+    <!--Simulation-->
+
+
+    <!--Dark fantasy-->
+
+
+  </section>
+
+  <section class="pb-4 pt-4">
+
+    <div class="d-flex mb-2 align-items-center">
+    <h2>Darkfantasy games</h2>
+     <a href="/categories/Darkfantasy" class="ms-auto">View More</a>
+    </div>
+    
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    
+      <% if(typeof games.darkfantasy != 'undefined' && games.darkfantasy.length > 0) { %>
+        <% games.darkfantasy.forEach(function(games, index){ %>
+        <a href="/games/<%= games._id %>" class="col text-center category__link">
+          <div class="category__img category__img--large shadow">
+            <img src="/uploads/<%= games.image %>" alt="<%= games.name %>" loading="lazy">
+          </div>
+          <div class="pt-1"><%= games.name %></div>
+        </a>
+        <% }) %>
+      <% } else { %>
+        <p>No items found.</p>
+      <% } %>
+    
+    
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Dark fantasy-->
+
+    
+    
+    
+  <!--point-->  
+    
+    
+  
+  <section class="pb-4 pt-4">
+
+    <div class="d-flex mb-2 align-items-center">
+    <h2>Point and click games</h2>
+     <a href="/categories/Point" class="ms-auto">View More</a>
+    </div>
+    
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    
+      <% if(typeof games.point != 'undefined' && games.point.length > 0) { %>
+        <% games.point.forEach(function(games, index){ %>
+        <a href="/games/<%= games._id %>" class="col text-center category__link">
+          <div class="category__img category__img--large shadow">
+            <img src="/uploads/<%= games.image %>" alt="<%= games.name %>" loading="lazy">
+          </div>
+          <div class="pt-1"><%= games.name %></div>
+        </a>
+        <% }) %>
+      <% } else { %>
+        <p>No items found.</p>
+      <% } %>
+    
+    
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--point-->
+<!--no category-->
+<section class="pb-4 pt-4">
+
+  <div class="d-flex mb-2 align-items-center">
+  <h2>nocategory games</h2>
+   <a href="/categories/nocategory" class="ms-auto">View More</a>
+  </div>
+  
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+  
+    <% if(typeof games.nocategory != 'undefined' && games.nocategory.length > 0) { %>
+      <% games.nocategory.forEach(function(games, index){ %>
+      <a href="/games/<%= games._id %>" class="col text-center category__link">
+        <div class="category__img category__img--large shadow">
+          <img src="/uploads/<%= games.image %>" alt="<%= games.name %>" loading="lazy">
+        </div>
+        <div class="pt-1"><%= games.name %></div>
+      </a>
+      <% }) %>
+    <% } else { %>
+      <p>No items found.</p>
+    <% } %>
+  
+  
+  </div>
+
+</section>
+
+
+<!--no category-->
+
+
+<!--submit-->
+
+<section class="px-4 py-5 my-5 text-center">
+    <img src="/img/publish.jpg"  class="d-block mx-auto mb-4 img-fluid" alt="New game information" widht="556" height="208"
+    loading= "lazy">
+    <h1 class= "display-5 fw-bold">New game information</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+           Upload new game Review or information free for people to view.
+        </p>    
+
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="/submit-game" class="btn btn-primary btn-dark btn-lg">Sumbit info</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!--submit-->
+
+
